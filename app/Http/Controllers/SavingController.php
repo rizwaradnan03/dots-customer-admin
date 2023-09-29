@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\DB;
 
 class SavingController extends BaseResponseController
 {
-    public function findAllSaving(){
-        $data = DB::connection('sqlsrv')->select("SELECT * FROM tabmaster");
+    public function find_many_by_(){
+        $data = DB::connection('sqlsrv')->selectOne("SELECT * FROM tabmaster WHERE norekening = '00102010013795'");
 
         return json_encode($data);
     }
